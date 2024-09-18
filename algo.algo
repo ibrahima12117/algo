@@ -1,0 +1,40 @@
+algorithm (lire la phrase)
+var 
+    longueur, nombre_mots, nombre_voyelles : integer;
+    afficher = phrase
+begin
+    initialiser longueur à 0
+    initialiser nombre_mots à 0
+    initialiser nombre_voyelles à 0 
+    initialiser dans_un_mot à Faux
+
+
+    pour chaque caractere dans la phrase 
+        longueur = longeur + 1
+        
+    
+        Si (caractere est dans voyelles) alors
+        nombre_voyelles = nombre_voyelles + 1
+        Fin Si
+
+        Si (caractère est un espace) alors
+            Si( dans_un_mot est Vrai) alors 
+                nombre_mots = nombre_mots + 1
+                dans_un_mot = Faux
+            Fin Si
+        Sinon Si caractère est un point
+            Si dans_un_mot est Vrai
+                nombre_mots = nombre_mots + 1
+            Fin Si
+            Sortir de la boucle
+        Sinon
+            dans_un_mot = Vrai
+        Fin Si
+    fin pour
+
+    Afficher "Longueur de la phrase: " + longueur
+    Afficher "Nombre de mots: " + nombre_mots
+    Afficher "Nombre de voyelles: " + nombre_voyelles
+
+    write (afficher)
+end
